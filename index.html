@@ -769,7 +769,12 @@ footer{background:#081737;color:rgba(255,255,255,0.6);padding:64px 0 28px;}
 /* ============ MOBILE ============ */
 @media (max-width:980px){
   .hero-inner{grid-template-columns:1fr;}
-  .hero-right{height:400px;margin-top:20px;}
+  .hero-right{height:400px;margin-top:20px;overflow:visible;}
+  .hero-product-frame{width:300px;}
+  .chip-1{top:4%;left:2%;}
+  .chip-2{top:16%;right:2%;}
+  .chip-3{bottom:18%;left:0%;}
+  .chip-4{bottom:2%;right:4%;}
   .nav-links{display:none;}
   .problem-grid{grid-template-columns:1fr 1fr;}
   .bento-grid{grid-template-columns:repeat(2,1fr);}
@@ -777,20 +782,44 @@ footer{background:#081737;color:rgba(255,255,255,0.6);padding:64px 0 28px;}
   .features-grid{grid-template-columns:1fr 1fr;}
   .solution-inner{grid-template-columns:1fr;}
   .glass-stack{height:320px;margin-top:20px;}
+  .glass-card{width:240px;}
+  .glass-2{left:100px;}
   .transform-wrap{grid-template-columns:1fr;}
   .tf-arrow{transform:rotate(90deg);margin:0 auto;}
   .how-timeline{grid-template-columns:1fr;gap:44px;}
   .how-line{display:none;}
+  .showcase-grid{grid-template-columns:1fr;}
 }
 @media (max-width:640px){
   .wrap{padding:0 20px;}
   section{padding:76px 0;}
   .hero{padding:140px 0 70px;}
+  .hero-right{height:340px;}
+  .hero-product-frame{width:250px;}
+  .mock-glow{width:260px;height:260px;}
+  .float-chip{padding:9px 13px;font-size:12px;gap:7px;}
+  .float-chip svg{width:16px;height:16px;}
+  .chip-1{top:2%;left:0;}
+  .chip-2{top:14%;right:0;}
+  .chip-3{bottom:16%;left:-2%;}
+  .chip-4{bottom:0;right:0;}
   .problem-grid, .features-grid{grid-template-columns:1fr;}
   .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
   .price-card{padding:36px 24px;}
   .nav-cta .btn-ghost{display:none;}
   .trust-row{gap:16px;}
+  .showcase-tag{font-size:11px;padding:6px 12px;top:12px;left:12px;}
+  .glass-stack{height:280px;}
+  .glass-card{width:220px;padding:18px;}
+  .glass-1{left:6px;}
+  .glass-2{left:90px;}
+  .glass-3{left:0;}
+}
+@media (max-width:420px){
+  .hero-right{height:300px;}
+  .hero-product-frame{width:210px;}
+  .float-chip{display:none;}
+  .glass-card{width:80%;left:10% !important;}
 }
 </style>
 </head>
