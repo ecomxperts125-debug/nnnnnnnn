@@ -74,29 +74,17 @@ header.site.scrolled{border-color:var(--line);box-shadow:0 4px 24px -18px rgba(1
 @media(min-width:920px){.nav-links{display:flex}}
 /* Hero */
 .hero{padding:64px 0 76px;background:radial-gradient(1100px 520px at 78% -8%,#e7edff 0%,rgba(255,255,255,0) 62%),radial-gradient(700px 400px at 8% 12%,#f1f5ff 0%,rgba(255,255,255,0) 60%)}
-.hero-grid{display:grid;gap:52px;align-items:center}
-@media(min-width:980px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:64px}}
+.hero-grid{display:grid;gap:32px;max-width:760px;margin:0 auto;text-align:center}
 .hero h1{font-size:clamp(2.1rem,5.6vw,3.75rem);margin:20px 0 18px}
-.hero p.sub{color:var(--navy-soft);font-size:1.03rem;max-width:600px}
-.price-row{display:flex;align-items:baseline;gap:14px;margin:26px 0 22px;flex-wrap:wrap}
+.hero p.sub{color:var(--navy-soft);font-size:1.03rem;max-width:600px;margin:0 auto}
+.price-row{display:flex;align-items:baseline;gap:14px;margin:26px 0 22px;flex-wrap:wrap;justify-content:center}
 .price-now{font-family:'Sora';font-size:2.4rem;font-weight:800}
 .price-mrp{color:var(--muted);text-decoration:line-through;font-weight:600}
 .save-chip{background:#e7fbf0;color:#0a7a45;font-weight:700;font-size:.8rem;padding:6px 13px;border-radius:100px;border:1px solid #bfeed6}
-.cta-row{display:flex;flex-wrap:wrap;gap:13px}
-.badges{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
+.cta-row{display:flex;flex-wrap:wrap;gap:13px;justify-content:center}
+.badges{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px;justify-content:center}
 .badge{display:inline-flex;align-items:center;gap:7px;font-size:.79rem;font-weight:600;color:var(--navy-soft);background:rgba(255,255,255,.75);border:1px solid var(--line);padding:8px 14px;border-radius:100px;backdrop-filter:blur(10px);box-shadow:var(--shadow-s)}
 .badge i{width:6px;height:6px;border-radius:50%;background:var(--royal)}
-/* Hero mockup */
-.mock-stage{position:relative;perspective:1400px}
-.mock-glow{position:absolute;inset:8% 6%;background:var(--grad);filter:blur(70px);opacity:.32;border-radius:50%}
-.mock-card{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-l);transform:rotateY(-11deg) rotateX(5deg);animation:float 7s ease-in-out infinite;background:#fff;border:1px solid var(--line)}
-.mock-card img{border-radius:0}
-.mock-chip{position:absolute;background:rgba(255,255,255,.82);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:16px;padding:12px 16px;box-shadow:var(--shadow-m);font-size:.8rem;font-weight:700}
-.mock-chip span{display:block;font-weight:500;color:var(--muted);font-size:.7rem}
-.chip-a{top:6%;left:-16px;animation:float 6s ease-in-out infinite}
-.chip-b{bottom:8%;right:-10px;animation:float 8s ease-in-out infinite .8s}
-@keyframes float{0%,100%{transform:translateY(0) rotateY(-11deg) rotateX(5deg)}50%{transform:translateY(-16px) rotateY(-11deg) rotateX(5deg)}}
-.mock-chip{animation-name:floatY}
 @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 /* Ticker */
 .ticker{background:var(--navy);color:#fff;padding:0;overflow:hidden}
@@ -188,18 +176,6 @@ tbody tr:last-child td{border-bottom:0}
 .dots{display:flex;gap:8px}
 .dots b{width:8px;height:8px;border-radius:100px;background:var(--line);cursor:pointer;transition:width .3s,background .3s}
 .dots b.on{width:26px;background:var(--royal)}
-/* Video cards */
-.vcard{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-s);transition:transform .3s,box-shadow .3s;cursor:pointer;background:#fff}
-.vcard:hover{transform:translateY(-6px);box-shadow:var(--shadow-m)}
-.vcard img{transition:transform .6s cubic-bezier(.2,.8,.2,1);border-radius:0}
-.vcard:hover img{transform:scale(1.06)}
-.vthumb{overflow:hidden;position:relative}
-.play{position:absolute;inset:0;display:grid;place-items:center}
-.play span{width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);display:grid;place-items:center;color:var(--royal);font-size:1.1rem;box-shadow:var(--shadow-m);transition:transform .3s}
-.vcard:hover .play span{transform:scale(1.12)}
-.vmeta{padding:16px 18px}
-.vmeta h4{font-size:.95rem}
-.vmeta p{font-size:.8rem;color:var(--muted)}
 /* Countdown */
 .timer-wrap{border-radius:var(--r-lg);padding:40px 30px;text-align:center;background:var(--grad-deep);color:#fff;box-shadow:var(--shadow-l)}
 .timer{display:flex;justify-content:center;gap:12px;margin:24px 0 8px;flex-wrap:wrap}
@@ -246,6 +222,8 @@ footer h5{color:#fff;font-family:'Sora';font-size:.95rem;margin-bottom:12px}
 footer a:hover{color:#fff}
 footer ul{list-style:none;display:grid;gap:8px}
 .f-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:.8rem;color:rgba(255,255,255,.5)}
+/* Single feature image */
+.feat-img{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-m);border:1px solid var(--line)}
 /* Reveal */
 .rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
 .rv.in{opacity:1;transform:none}
@@ -272,37 +250,27 @@ footer ul{list-style:none;display:grid;gap:8px}
 
 <main id="top">
 
-<!-- HERO -->
+<!-- HERO (image removed — text + badges only, per request) -->
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div class="rv">
-      <span class="eyebrow">Digital Career Toolkit · 2026 Edition</span>
-      <h1>Get Interview-Ready in <span class="grad-text">Just 3 Days</span></h1>
-      <p class="sub">Prepare for HR, Banking, BPO, Sales, IT, Customer Support, Finance &amp; Corporate interviews using one complete career toolkit with 750+ real interview questions, expert answers, resume templates, HR secrets, aptitude practice, and interview preparation resources.</p>
-      <div class="price-row">
-        <span class="price-now">₹299</span>
-        <span class="price-mrp">₹999</span>
-        <span class="save-chip">Save 70% · One-time payment</span>
-      </div>
-      <div class="cta-row">
-        <a href="#buy" class="btn btn-primary">Get Instant Access – ₹299</a>
-        <a href="#inside" class="btn btn-ghost">See What's Inside</a>
-      </div>
-      <div class="badges">
-        <span class="badge"><i></i>Instant Download</span>
-        <span class="badge"><i></i>Secure Checkout</span>
-        <span class="badge"><i></i>Lifetime Access</span>
-        <span class="badge"><i></i>One-Time Payment</span>
-        <span class="badge"><i></i>Mobile + Laptop Friendly</span>
-      </div>
+  <div class="wrap hero-grid rv">
+    <span class="eyebrow" style="margin:0 auto">Digital Career Toolkit · 2026 Edition</span>
+    <h1>Get Interview-Ready in <span class="grad-text">Just 3 Days</span></h1>
+    <p class="sub">Prepare for HR, Banking, BPO, Sales, IT, Customer Support, Finance &amp; Corporate interviews using one complete career toolkit with 750+ real interview questions, expert answers, resume templates, HR secrets, aptitude practice, and interview preparation resources.</p>
+    <div class="price-row">
+      <span class="price-now">₹299</span>
+      <span class="price-mrp">₹999</span>
+      <span class="save-chip">Save 70% · One-time payment</span>
     </div>
-    <div class="mock-stage rv">
-      <div class="mock-glow" aria-hidden="true"></div>
-      <div class="mock-card">
-        <img src="https://placehold.co/900x1100/1e3a8a/ffffff?text=Interview+Master+Pack+2026" alt="Interview Master Pack 2026 digital bundle mockup" width="900" height="1100" />
-      </div>
-      <div class="mock-chip chip-a">750+ Questions<span>With expert answers</span></div>
-      <div class="mock-chip chip-b">Instant Delivery<span>Download in seconds</span></div>
+    <div class="cta-row">
+      <a href="#buy" class="btn btn-primary">Get Instant Access – ₹299</a>
+      <a href="#inside" class="btn btn-ghost">See What's Inside</a>
+    </div>
+    <div class="badges">
+      <span class="badge"><i></i>Instant Download</span>
+      <span class="badge"><i></i>Secure Checkout</span>
+      <span class="badge"><i></i>Lifetime Access</span>
+      <span class="badge"><i></i>One-Time Payment</span>
+      <span class="badge"><i></i>Mobile + Laptop Friendly</span>
     </div>
   </div>
 </section>
@@ -322,7 +290,7 @@ footer ul{list-style:none;display:grid;gap:8px}
   </div>
 </section>
 
-<!-- PROBLEM -->
+<!-- PROBLEM (illustration images removed, kept the before/after comparison which already carries the message) -->
 <section class="soft">
   <div class="wrap">
     <div class="sec-head rv">
@@ -360,11 +328,6 @@ footer ul{list-style:none;display:grid;gap:8px}
         </ul>
       </div>
     </div>
-    <div class="grid g3 rv" style="margin-top:26px">
-      <img loading="lazy" src="https://placehold.co/640x400/eaf0ff/1e3a8a?text=Before+Interview+Anxiety" alt="Illustration placeholder: candidate feeling nervous before an interview" width="640" height="400" />
-      <img loading="lazy" src="https://placehold.co/640x400/2452ff/ffffff?text=Structured+Preparation" alt="Illustration placeholder: structured interview preparation" width="640" height="400" />
-      <img loading="lazy" src="https://placehold.co/640x400/eaf0ff/1e3a8a?text=Offer+Letter+Day" alt="Illustration placeholder: candidate receiving an offer letter" width="640" height="400" />
-    </div>
   </div>
 </section>
 
@@ -397,26 +360,24 @@ footer ul{list-style:none;display:grid;gap:8px}
         <div class="row"><span>Lifetime Access &amp; Updates</span><b>Included</b></div>
         <div class="big">₹299</div>
         <p style="color:rgba(255,255,255,.72);font-size:.88rem">One-time payment · Instant download · No subscription</p>
-        <a href="#buy" class="btn">Get Instant Access – ₹299</a>
-        <p class="disclaimer" style="margin-top:12px">Replace this button link with your checkout URL.</p>
+        <a href="https://ecomxperts.shop" class="btn">Get Instant Access – ₹299</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MOCKUPS -->
+<!-- SINGLE RELEVANT PRODUCT IMAGE (replaces the 3 mockup placeholders) -->
 <section>
-  <div class="wrap">
+  <div class="wrap" style="max-width:900px;text-align:center">
     <div class="sec-head rv">
       <span class="eyebrow">Inside The Pack</span>
       <h2>Designed to actually be used</h2>
       <p>Clean, printable, phone-friendly documents you can revise the night before an interview.</p>
     </div>
-    <div class="grid g3">
-      <div class="vcard rv"><div class="vthumb"><img loading="lazy" src="https://placehold.co/800x600/1e3a8a/ffffff?text=750%2B+Q%26A+Ebook" alt="Product mockup placeholder: 750+ questions and answers ebook" width="800" height="600" /></div></div>
-      <div class="vcard rv"><div class="vthumb"><img loading="lazy" src="https://placehold.co/800x600/2452ff/ffffff?text=Resume+Template+Pack" alt="Product mockup placeholder: resume template pack" width="800" height="600" /></div></div>
-      <div class="vcard rv"><div class="vthumb"><img loading="lazy" src="https://placehold.co/800x600/0b1533/ffffff?text=HR+Cheat+Sheet" alt="Product mockup placeholder: HR cheat sheet" width="800" height="600" /></div></div>
+    <div class="feat-img rv">
+      <img loading="lazy" src="https://placehold.co/1200x680/1e3a8a/ffffff?text=Interview+Master+Pack+%E2%80%94+Preview" alt="Preview of the Interview Master Pack document set" width="1200" height="680" />
     </div>
+    <p style="color:var(--muted);font-size:.85rem;margin-top:14px">Swap this with an actual screenshot/mockup of your PDF pack before publishing.</p>
   </div>
 </section>
 
@@ -491,17 +452,7 @@ footer ul{list-style:none;display:grid;gap:8px}
   </div>
 </section>
 
-<!-- VIDEO REVIEWS -->
-<section class="soft">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">Video Reviews</span>
-      <h2>Hear it in their words</h2>
-      <p>Placeholder video cards — replace thumbnails and links with your own.</p>
-    </div>
-    <div class="grid g3" id="videos"></div>
-  </div>
-</section>
+<!-- VIDEO REVIEWS SECTION REMOVED PER REQUEST -->
 
 <!-- COUNTDOWN -->
 <section>
@@ -515,7 +466,7 @@ footer ul{list-style:none;display:grid;gap:8px}
         <div class="tbox"><b data-t="m">00</b><small>Minutes</small></div>
         <div class="tbox"><b data-t="s">00</b><small>Seconds</small></div>
       </div>
-      <a href="#buy" class="btn">Claim ₹299 Price</a>
+      <a href="https://ecomxperts.shop" class="btn">Claim ₹299 Price</a>
       <p class="disclaimer">Demo timer for this template — it resets every 24 hours. Set a real deadline before running ads.</p>
     </div>
   </div>
@@ -533,7 +484,7 @@ footer ul{list-style:none;display:grid;gap:8px}
         <div class="card"><div class="ic">∞</div><h3>Use it for every interview</h3><p>Lifetime access means you revise before every round, for every job you apply to.</p></div>
         <div class="card"><div class="ic">↑</div><h3>Better answers, better offers</h3><p>Structured negotiation scripts help you speak about salary without hesitation.</p></div>
       </div>
-      <a href="#buy" class="btn btn-primary" style="margin-top:32px">Get Instant Access – ₹299</a>
+      <a href="https://ecomxperts.shop" class="btn btn-primary" style="margin-top:32px">Get Instant Access – ₹299</a>
     </div>
   </div>
 </section>
@@ -569,12 +520,12 @@ footer ul{list-style:none;display:grid;gap:8px}
 
 <!-- FINAL CTA -->
 <section>
-  <div class="wrap" style="max-width:820px;text-align:center" class="rv">
+  <div class="wrap" style="max-width:820px;text-align:center">
     <div class="rv">
       <h2 style="font-size:clamp(1.8rem,4.4vw,2.7rem)">Your next interview is closer <span class="grad-text">than you think</span></h2>
       <p style="color:var(--muted);margin-top:14px">Download the pack today and walk into your next round prepared.</p>
       <div class="cta-row" style="justify-content:center;margin-top:26px">
-        <a href="#buy" class="btn btn-primary">Get Instant Access – ₹299</a>
+        <a href="https://ecomxperts.shop" class="btn btn-primary">Get Instant Access – ₹299</a>
         <a href="#inside" class="btn btn-ghost">Review What's Included</a>
       </div>
     </div>
@@ -615,7 +566,7 @@ footer ul{list-style:none;display:grid;gap:8px}
 <!-- Sticky CTA -->
 <div class="sticky-cta">
   <div class="txt"><b>Interview Master Pack 2026</b><small>₹299 <s style="color:#9aa4bd">₹999</s> · Instant download · Lifetime access</small></div>
-  <a href="#buy" class="btn btn-primary">Get Instant Access – ₹299</a>
+  <a href="https://ecomxperts.shop" class="btn btn-primary">Get Instant Access – ₹299</a>
 </div>
 
 <script>
@@ -624,7 +575,7 @@ footer ul{list-style:none;display:grid;gap:8px}
    ============================================================ */
 var CONFIG = {
   whatsapp: "https://wa.me/910000000000",     // your WhatsApp link
-  checkoutUrl: "#buy",                        // your checkout URL
+  checkoutUrl: "https://ecomxperts.shop",     // payment redirect link (updated)
   ratingPlaceholder: "4.8/5 Rating (placeholder)",
   downloadsPlaceholder: "10,000+ Downloads (placeholder)",
   feedbackPlaceholder: "98% Positive Feedback (placeholder)",
@@ -722,16 +673,6 @@ var ROAD = [
 ];
 document.getElementById('road').innerHTML = ROAD.map(function(r,i){
   return '<div class="step rv"><div class="n">'+(i+1)+'</div><h4>'+r[0]+'</h4><p>'+r[1]+'</p></div>';
-}).join('');
-
-/* ---------- Video reviews ---------- */
-var VIDEOS = [
-  ["Fresher — first job offer","Placeholder video review"],
-  ["Experienced — role switch","Placeholder video review"],
-  ["Banking aspirant — selected","Placeholder video review"]
-];
-document.getElementById('videos').innerHTML = VIDEOS.map(function(v,i){
-  return '<article class="vcard rv"><div class="vthumb"><img loading="lazy" src="https://placehold.co/800x500/1e3a8a/ffffff?text=Video+Review+'+(i+1)+'" alt="Video review placeholder '+(i+1)+'" width="800" height="500" /><div class="play"><span>▶</span></div></div><div class="vmeta"><h4>'+v[0]+'</h4><p>'+v[1]+'</p></div></article>';
 }).join('');
 
 /* ---------- FAQ ---------- */
@@ -855,9 +796,7 @@ addEventListener('scroll', function(){ hdr.classList.toggle('scrolled', scrollY 
 document.getElementById('wa').href = CONFIG.whatsapp;
 document.getElementById('wa-footer').href = CONFIG.whatsapp;
 document.getElementById('yr').textContent = new Date().getFullYear();
-if(CONFIG.checkoutUrl && CONFIG.checkoutUrl !== '#buy'){
-  document.querySelectorAll('a.btn-primary, .stack-total .btn, .timer-wrap .btn').forEach(function(a){ a.href = CONFIG.checkoutUrl; });
-}
+document.querySelectorAll('a.btn-primary, .stack-total .btn, .timer-wrap .btn').forEach(function(a){ a.href = CONFIG.checkoutUrl; });
 </script>
 </body>
 </html>
